@@ -16,10 +16,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Shoot");
-        }
+
         _input = new Vector2(Input.GetAxis("Horizontal"), 
             Input.GetAxis("Vertical"));
        // input = input.normalized; //SET LENGTH TO 1 
