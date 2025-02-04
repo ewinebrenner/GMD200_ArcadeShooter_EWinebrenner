@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public static int score = 0;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Hit solid");
@@ -18,8 +17,10 @@ public class Enemy : MonoBehaviour
             Destroy(collision.gameObject); //Destroy the bullet
             Destroy(gameObject); //Destroy the enemy
 
-            score += 10;
-            GameObject.Find("Score").GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString();
+            GameManager.Score += 10;
+          //  GameObject.Find("Score").GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString();
+            //FindObjectOfType<TMPro.TextMeshProUGUI>().text = score.ToString();
+           // FindObjectsOfType
         }
     }
 }
